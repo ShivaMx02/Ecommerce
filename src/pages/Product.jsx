@@ -5,7 +5,6 @@ import { ShopContext } from '../context/shopContext'
 const Product = () => {
 
   const {productId} = useParams()
-  
   const {products} = useContext(ShopContext)
   const [productData, setProductData] = useState(false)
 
@@ -15,8 +14,6 @@ const Product = () => {
 
       if (item._id === productId){
         setProductData(item)
-        console.log(item);
-        
         return null;
       }
     })
